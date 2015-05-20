@@ -1,0 +1,56 @@
+body,div,form,input,button,h1{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+h1{
+    text-align: center;
+    margin:20px;
+}
+form#login{
+    border: 1px solid black;
+    width: 275px;
+    float: left;
+    margin-left: 275px;
+    text-align: center;
+}
+form#register{
+    border: 1px solid black;
+    width: 300px;
+    float: right;
+    margin-right: 275px;
+
+}
+form{
+    height: 250px;
+    margin: 5px;
+    padding: 15px;
+
+}
+button{
+    background-color: #5b9bd5;
+    border: 1px solid #41719c;
+    color: white;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+}
+form#login input{
+    border: 1px solid black;
+    padding: 10px;
+    margin:5px;
+    width: 200px
+}
+form#register input.right{
+    border: 1px solid black;
+    width: 150px;
+    float: right;
+    padding: 5px;
+    margin: 2px;
+}
+form#register button{
+    text-align: center;
+    margin-left: 70px;
+}
+form#register input#biggerMargin{
+    margin-left: 50px;
+}
