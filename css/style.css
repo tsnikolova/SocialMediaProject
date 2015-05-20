@@ -1,4 +1,4 @@
-body,div,form,input,button,h1{
+body,div,form,input,button,h1, image, p{
     margin: 0 auto;
     padding: 0 auto;
 }
@@ -53,4 +53,78 @@ form#register button{
 }
 form#register input#biggerMargin{
     margin-left: 50px;
+}
+div#wrapper img#photo{
+    content: url("../images/user-without-photo.jpg");
+    width: 40px;
+    float: left;
+    margin: 10px;
+}
+div#wrapper img#msg{
+    content: url("../images/msg.png");
+    width: 20px;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+}
+div#wrapper img#friends {
+    content: url("../images/friends.png");
+    width: 20px;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+}
+div#wrapper img#settings{
+    content: url("../images/settings.png");
+    width: 20px;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+}
+div#wrapper img#changePassword{
+    content: url("../images/change-password.png");
+    width: 20px;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+}
+div#wrapper img#logout{
+    content: url("../images/logout.png");
+    width: 20px;
+    padding: 3px;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+}
+p#name{
+    margin-top: 20px;
+    float: left;
+}
+div#wrapper input#search{
+    background-image: url("../images/search.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    float:right;
+    height: 15px;
+    width: 200px;
+    margin: 15px 70px 15px 15px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+div#wrapper h1#news{
+    border:1px solid black;
+    margin: 25px 0px 0px 0px;
+    width: 100%;
+    padding: 15px 15px 15px 30px;
+    text-align: left;
+    background-image: url("../images/msg.png");
+    background-repeat: no-repeat;
+    background-position: 200px 5px;
+    float: left;
+
 }
