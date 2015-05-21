@@ -128,3 +128,71 @@ div#wrapper h1#news{
     float: left;
 
 }
+/*Edit Profile*/
+h1#edit{
+    border:1px solid black;
+    margin: 45px 0px 0px 0px;
+    width: 100%;
+    padding: 15px 15px 15px 30px;
+    text-align: left;
+}
+div#editProfile{
+    border:1px solid black;
+    width: 700px;
+    height: 310px;
+    margin: 10px 0px 0px 250px;
+}
+div#editPhoto{
+    float: left;
+    padding: 10px;
+    border:1px solid black;
+    width: 200px;
+    margin: 20px;
+    height: 210px;
+    text-align: center;
+}
+div#editProfileInfo{
+    float: left;
+    padding: 20px;
+    border:1px solid black;
+    width: 350px;
+    margin: 20px 20px 5px 20px;
+    height: 190px;
+}
+input.inputText{
+    margin: 0 0 5px 0;
+    width: 150px;
+    height: 20px;
+    border: 1px solid black;
+}
+button.upload{
+    background-color: #5b9bd5;
+    border: 1px solid #41719c;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin: 10px 5px 10px 0px;
+
+}
+button#saveChanges{
+    background-color: #5b9bd5;
+    border: 1px solid #41719c;
+    color: white;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    float: right;
+}
+/*Change Password*/
+div#newPassword{
+    text-align: center;
+    float: left;
+    padding: 20px;
+    border:1px solid black;
+    width: 350px;
+    height: 160px;
+    margin: 10px 0px 0px 400px;
+}
+div#newPassword input.inputText{
+    margin: 7px;
+}

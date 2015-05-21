@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <img id="photo" alt="user-photo" />
+    <p id="name" ng-model="name">{{name}}</p>
+    <img id="msg" alt="msg-photo" />
+    <img id="friends" alt="friends" />
+    <img id="settings" alt="settings" />
+    <img id="changePassword" alt="change-password" />
+    <img id="logout" alt="logout" />
+    <input type="text" placeholder="Search..." id="search">
+
+    <br/>
+    <div>
+        <h1 id="edit"> Edit Profile</h1>
+    </div>
+
+    <div id="editProfile">
+        <div id="editPhoto">
+        <img alt="user-photo"><br/>
+        Allowed format: .jpg <br />
+        Limit: 128kb <br />
+        <button class="upload">Upload</button>
+        </div>
+        <div id="editProfileInfo">
+            Name <input type="text" value="{{name}}" ng-model="name" class="inputText"> <br />
+            Email <input type="text" value="{{email}}" ng-model="email" class="inputText"> <br />
+            Gender <input type="radio" name="gender" value="male" id="biggerMargin"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other <br />
+            <button class="upload">Upload</button>
+            <img alt="cover" id="coverPhoto"> <br/>
+            Limit: 1024kb
+        </div>
+        <button id="saveChanges">Save Changes</button>
+    </div>
+</div>
+
+</body>
+</html>
