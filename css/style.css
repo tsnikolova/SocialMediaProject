@@ -51,7 +51,7 @@ form#register button{
     text-align: center;
     margin-left: 70px;
 }
-form#register input#biggerMargin{
+form#register input.biggerMargin{
     margin-left: 50px;
 }
 div#wrapper img#photo{

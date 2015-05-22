@@ -2,34 +2,26 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Social Media</title>
+    <title>Social Network</title>
+    <link rel="stylesheet" href="css/loading-bar.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-<div id="wrapper">
-    <h1>Social Network</h1>
-    <form id="login">
-            Username <br />
-            <input type="text" name="username"><br />
-            Password <br />
-            <input type="password" name="password"> </br>
-            <button>Login</button>
-    </form>
-    <form id="register">
-        Username <input type="text" name="username" class="right"> <br /> <br />
-        Password <input type="password" name="password" class="right"> <br /><br />
-        Confirm Password <input type="password" name="confirmPassword" class="right"> <br /><br />
-        Name <input type="text" name="name" class="right"> <br /><br />
-        Email <input type="email" name="email" class="right"> <br /><br />
-        Gender <input type="radio" name="gender" value="male" id="biggerMargin"> Male
-        <input type="radio" name="gender" value="female"> Female
-        <input type="radio" name="gender" value="other"> Other <br />
-        <button>Login</button>
-    </form>
-</div>
-<script type="text/javascript" src="lib/angular/angular.js"></script>
-<script type="text/javascript" src="lib/angular/angular-route.js"></script>
-<script type="text/javascript" src="lib/angular/angular-resource.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+<body ng-app="SocialNetwork">
+    <div ng-view>
+    </div>
+
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="lib/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="lib/loading-bar.js"></script>
+    <script type="text/javascript" src="lib/jquery.noty.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/services/authentication.js"></script>
+    <script type="text/javascript" src="js/services/mainData.js"></script>
+    <script type="text/javascript" src="js/services/notifyService.js"></script>
+    <script type="text/javascript" src="js/services/socialNetworkServices.js"></script>
+    <script type="text/javascript" src="js/controllers/AuthenticationController.js"></script>
+    <script type="text/javascript" src="js/controllers/mainController.js"></script>
 </body>
 </html>

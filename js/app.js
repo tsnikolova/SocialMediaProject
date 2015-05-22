@@ -1,16 +1,16 @@
 'use strict';
 
-var Advertisements = angular.module('Advertisements', ['ngRoute', 'angular-loading-bar']);
+var SocialNetwork = angular.module('SocialNetwork', ['ngRoute', 'angular-loading-bar']);
 
-Advertisements.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net/api');
+SocialNetwork.constant('baseServiceUrl', 'http://softuni-soccial-network.azurewebsites.net/api');
 
-Advertisements.config(function ($routeProvider) {
+SocialNetwork.config(function ($routeProvider) {
     $routeProvider
-        .when('#/', {
-            templateUrl:'index.html',
+        .when('/', {
+                templateUrl:'startPage.html',
             controller:'MainController'
         })
-        .when('#/home', {
+        .when('/home', {
             templateUrl:'login-home-view.html',
             controller:'MainController'
         })

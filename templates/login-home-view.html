@@ -19,7 +19,41 @@
     <br/>
     <div>
     <h1 id="news"> News Feed</h1>
-
+    </div>
+    <div class="well row" ng-repeat="n in data.news">
+        <div class="row">
+            <div class="col-lg-9">
+                <h1>{{name}}</h1>
+                <p class="lead">{{ad.text}}</p>
+                <div class="row">
+                    <div class="col-md-4 btn-group-vertical">
+                        <a href="" class="btn btn-default disabled">Owner</a>
+                        <a href="" class="btn btn-default disabled">E-mail</a>
+                        <a href="" class="btn btn-default disabled">Phone</a>
+                    </div>
+                    <div class="col-md-8 btn-group-vertical">
+                        <a href="" class="btn btn-default disabled">{{ad.ownerName}}</a>
+                        <a href="" class="btn btn-default disabled">{{ad.ownerEmail}}</a>
+                        <a href="" class="btn btn-default disabled">{{ad.ownerPhone}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    <p class="pull-right">{{ad.date | date: "dd MMMM yyyy"}}</p>
+                </div>
+                <div class="row">
+                    <div class="bs-component pull-right">
+                        <span class="label label-success">{{ad.categoryName}}</span>
+                        <span class="label label-warning">{{ad.townName}}</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <img src="" class="pull-right img-responsive img-thumbnail" ng-src="{{ad.imageDataUrl || '/resources/9gag-no.jpg'}}" />
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

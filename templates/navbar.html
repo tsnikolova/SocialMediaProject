@@ -1,0 +1,21 @@
+
+<div ng-controller="AuthenticationController">
+    <div class="container">
+
+        <div id="navbar-main" aria-expanded="false">
+
+            <ul  ng-if="username">
+                <li><img id="photo" alt="user-photo" /></li>
+                <li><p id="name" ng-model="name">{{name}}</p></li>
+                <li><img src="../images/msg.png" id="msg" alt="msg-photo" /></li>
+                <li><img id="friends" alt="friends" /></li>
+                <li><img id="settings" alt="settings" /></li>
+                <li><img id="changePassword" alt="change-password" /></li>
+                <li><img id="logout" alt="logout" /></li>
+                <li><input type="text" placeholder="Search..." id="search"></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
