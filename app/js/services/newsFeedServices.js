@@ -1,14 +1,14 @@
 'use strict';
 
-SocialNetwork.factory('adServices', function ($http, baseServiceUrl) {
-    var socialNetworkService = {};
+SocialNetwork.factory('newsFeedServices', function ($http, baseServiceUrl) {
+    var newsFeedService = {};
 
-    socialNetworkService.params = {};
+    newsFeedService.params = {};
 
-    var socialNetworkServiceUrl = baseServiceUrl + "/users/:username";
-
-    socialNetworkService.GetUserProfile = function (headers, success) {
-        $http.get(socialNetworkServiceUrl,
+    var newsFeedServiceUrl = baseServiceUrl + "/posts";
+/*
+    newsFeedService.GetUserProfile = function (headers, success) {
+        $http.get(newsFeedServiceUrl,
             {
                 params: this.params,
                 headers: headers
@@ -17,15 +17,15 @@ SocialNetwork.factory('adServices', function ($http, baseServiceUrl) {
                 success(data);
             });
     };
-
-    socialNetworkService.PublishPost = function (adData, headers, success, error) {
-        $http.post(socialNetworkServiceUrl, adData, {headers: headers})
+*/
+    newsFeedService.PublishPost = function (postData, headers, success, error) {
+        $http.post(newsFeedServiceUrl, postData, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
-    socialNetworkService.EditPost = function (currentPost, headers, success, error) {
+    newsFeedService.EditPost = function (currentPost, headers, success, error) {
         $http.put(socialNetworkServiceUrl + '/' + currentPost.id, currentPost, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);

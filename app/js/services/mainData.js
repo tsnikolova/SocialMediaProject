@@ -6,7 +6,7 @@ SocialNetwork.factory('mainData', function ($http, baseServiceUrl) {
     data.params = {};
 
     data.getAllNews = function (success, error) {
-        $http.get(baseServiceUrl + '/me/feed', {params: this.params})
+        $http.get(baseServiceUrl + '/#', {params: this.params})
             .success(function (data) {
                 success(data)
             }).error(error);

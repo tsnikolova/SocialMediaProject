@@ -20,14 +20,14 @@ SocialNetwork.factory('authentication', function ($http, baseServiceUrl) {
     };
 
     service.EditUserProfile = function (editUserData, success, error) {
-        $http.put(serviceUrl + '/me', editUserData, {headers: this.GetHeaders()})
+        $http.put(serviceUrl + '/profile', editUserData, {headers: this.GetHeaders()})
             .success(function (data, status, headers, config) {
                 success(data)
             }).error(error);
     };
 
     service.ChangePassword = function (passwordData, success, error) {
-        $http.put(serviceUrl + '/ChangePassword', passwordData, {headers: this.GetHeaders()})
+        $http.put(serviceUrl + '/profile/password', passwordData, {headers: this.GetHeaders()})
             .success(function (data, status, headers, config) {
                 success()
             }).error(error);
