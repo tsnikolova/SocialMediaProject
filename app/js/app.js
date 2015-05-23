@@ -6,19 +6,23 @@ SocialNetwork.constant('baseServiceUrl', 'http://softuni-soccial-network.azurewe
 
 SocialNetwork.config(function ($routeProvider) {
     $routeProvider
-        .when('/', {
-                templateUrl:'startPage.html',
+        .when('/#/', {
+            templateUrl:'templates/login-and-register.html',
             controller:'MainController'
         })
-        .when('/home', {
-            templateUrl:'login-home-view.html',
+        .when('/#/', {
+            templateUrl:'templates/login-and-register.html',
+            controller:'MainController'
+        })
+        .when('/#/', {
+            templateUrl:'templates/news-feed.html',
             controller:'MainController'
         })
         .when('#/profile', {
-            templateUrl:'edit-profile.html',
+            templateUrl:'templates/edit-user.html',
             controller:'MainController'
         })
-        .when('#/profile/password', {
+		.when('#/profile/password', {
             templateUrl:'change-password.html',
             controller:'MainController'
         })
