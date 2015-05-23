@@ -48,7 +48,6 @@ SocialNetwork.factory('newsFeedServices', function ($http, baseServiceUrl) {
             }).error(error);
     };
 
-
     newsFeedService.clearParams = function () {
         newsFeedService.params.status = null;
         newsFeedService.params.startPage = 1;

@@ -11,7 +11,7 @@ SocialNetwork.config(function ($routeProvider) {
             controller:'MainController'
         })
         
-        .when('#/', {
+        .when('/#/', {
             templateUrl:'templates/news-feed.html',
             controller:'MainController'
         })

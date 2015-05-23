@@ -1,20 +1,17 @@
 
 <div ng-controller="AuthenticationController">
-    <div class="container">
+    <div>
 
-        <div id="navbar-main" aria-expanded="false">
+        <div id="wrapper" aria-expanded="false">
 
-            <ul  ng-if="username">
-                <li><img id="photo" alt="user-photo" /></li>
-                <li><p id="name" ng-model="name">{{name}}</p></li>
-                <li><img src="../images/msg.png" id="msg" alt="msg-photo" /></li>
-                <li><img id="friends" alt="friends" /></li>
-                <li><img id="settings" alt="settings" /></li>
-                <li><img id="changePassword" alt="change-password" /></li>
-                <li><img id="logout" alt="logout" /></li>
-                <li><input type="text" placeholder="Search..." id="search"></li>
-            </ul>
-
+            <img id="photo"  alt="user-photo" />
+            <p id="name" ng-bind="name"></p>
+            <img id="msg" alt="msg-photo" />
+            <img id="friends" alt="friends" />
+            <img id="settings" alt="settings" />
+            <a href="../profile/password" ng-click="changePassword()"> <img id="changePassword" alt="change-password" /></a>
+            <a href="../app/#/" ng-click="logout()"><img id="logout" alt="logout"  /></a>
+            <input type="text" placeholder="Search..." id="search">
         </div>
     </div>
 </div>

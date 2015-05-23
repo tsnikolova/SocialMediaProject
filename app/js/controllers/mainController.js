@@ -7,16 +7,14 @@ SocialNetwork.controller('MainController', function ($scope, $location, mainData
     if ($scope.username) {
         authentication.EditUserProfile(function (serverData) {
             $scope.userData = serverData;
-            
-    	})
+		})
     }
     var path = $location.path();
     if ((path.indexOf("user") != -1) && !authentication.isLoggedIn()) {
         $location.path('/#');
     }
 
-/*
-var getNewsFeed = function () {
+	/*var getNewsFeed = function () {
 
         mainData.getAllNews(
             function (serverData) {
@@ -33,5 +31,5 @@ var getNewsFeed = function () {
             });
     };
 
-    getNewsFeed();
-	*/
+    getNewsFeed();*/
+});

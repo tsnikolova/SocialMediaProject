@@ -21,7 +21,7 @@ form#register{
 
 }
 form{
-    height: 250px;
+    height: 275px;
     margin: 5px;
     padding: 15px;
 
@@ -54,13 +54,13 @@ form#register button{
 form#register input.biggerMargin{
     margin-left: 50px;
 }
-div#wrapper img#photo{
+img#photo{
     content: url("../images/user-without-photo.jpg");
     width: 40px;
     float: left;
     margin: 10px;
 }
-div#wrapper img#msg{
+img#msg{
     content: url("../images/msg.png");
     width: 20px;
     float: left;
@@ -68,7 +68,7 @@ div#wrapper img#msg{
     border: 1px solid black;
     padding: 3px;
 }
-div#wrapper img#friends {
+img#friends {
     content: url("../images/friends.png");
     width: 20px;
     float: left;
@@ -76,7 +76,7 @@ div#wrapper img#friends {
     border: 1px solid black;
     padding: 3px;
 }
-div#wrapper img#settings{
+img#settings{
     content: url("../images/settings.png");
     width: 20px;
     float: left;
@@ -84,7 +84,7 @@ div#wrapper img#settings{
     border: 1px solid black;
     padding: 3px;
 }
-div#wrapper img#changePassword{
+img#changePassword{
     content: url("../images/change-password.png");
     width: 20px;
     float: left;
@@ -92,7 +92,7 @@ div#wrapper img#changePassword{
     border: 1px solid black;
     padding: 3px;
 }
-div#wrapper img#logout{
+img#logout{
     content: url("../images/logout.png");
     width: 20px;
     padding: 3px;
@@ -104,7 +104,7 @@ p#name{
     margin-top: 20px;
     float: left;
 }
-div#wrapper input#search{
+input#search{
     background-image: url("../images/search.png");
     background-repeat: no-repeat;
     background-position: right;
@@ -116,7 +116,7 @@ div#wrapper input#search{
     padding: 10px;
     border-radius: 5px;
 }
-div#wrapper h1#news{
+h1#news{
     border:1px solid black;
     margin: 25px 0px 0px 0px;
     width: 100%;
