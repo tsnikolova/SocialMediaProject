@@ -5,9 +5,10 @@ SocialNetwork.factory('newsFeedServices', function ($http, baseServiceUrl) {
 
     newsFeedService.params = {};
 
-    var newsFeedServiceUrl = baseServiceUrl + "/posts";
+    var newsFeedServiceUrl = baseServiceUrl + "/me";
 /*
-    newsFeedService.GetUserProfile = function (headers, success) {
+
+    newsFeedService.GetUserPosts = function (headers, success) {
         $http.get(newsFeedServiceUrl,
             {
                 params: this.params,
@@ -17,8 +18,16 @@ SocialNetwork.factory('newsFeedServices', function ($http, baseServiceUrl) {
                 success(data);
             });
     };
+    newsFeedService.GetUserAdById = function (postId, headers, success) {
+        $http.get(adServiceUrl + '/' + postId,
+            {headers: headers})
+            .success(function (data, status, headers, config) {
+                success(data);
+            });
+    };
 */
-    newsFeedService.PublishPost = function (postData, headers, success, error) {
+
+    newsFeedService.PublishPosts = function (postData, headers, success, error) {
         $http.post(newsFeedServiceUrl, postData, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
@@ -26,27 +35,27 @@ SocialNetwork.factory('newsFeedServices', function ($http, baseServiceUrl) {
     };
 
     newsFeedService.EditPost = function (currentPost, headers, success, error) {
-        $http.put(socialNetworkServiceUrl + '/' + currentPost.id, currentPost, {headers: headers})
+        $http.put(newsFeedServiceUrl + '/' + currentPost.id, currentPost, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
-    socialNetworkService.DeletePost = function (postId, headers, success, error) {
-        $http.delete(socialNetworkServiceUrl + '/' + postId, {headers: headers})
+    newsFeedService.DeletePost = function (postId, headers, success, error) {
+        $http.delete(newsFeedServiceUrl + '/' + postId, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
 
-    socialNetworkService.clearParams = function () {
-        socialNetworkService.params.status = null;
-        socialNetworkService.params.startPage = 1;
+    newsFeedService.clearParams = function () {
+        newsFeedService.params.status = null;
+        newsFeedService.params.startPage = 1;
     };
 
-    socialNetworkService.clearParams();
-    socialNetworkService.params.pageSize = 5;
+    newsFeedService.clearParams();
+    newsFeedService.params.pageSize = 5;
 
-    return socialNetworkService;
+    return newsFeedService;
 });

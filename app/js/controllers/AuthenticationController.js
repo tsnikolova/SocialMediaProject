@@ -70,7 +70,6 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
 
     $scope.clear = function () {
         mainData.clearParams();
-        adminServices.clearParams();
         $route.reload();
     };
 
