@@ -1,7 +1,7 @@
 'use strict';
 
 SocialNetwork.controller('AuthenticationController', function ($scope, $location, $route,
-                                                                authentication, mainData, socialNetworkServices, notifyService) {
+                                                                authentication, mainData, newsFeedServices, notifyService) {
 
     var ClearData = function () {
         $scope.loginData = "";
@@ -16,7 +16,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
                 notifyService.showInfo("Successful Login!");
                 authentication.SetCredentials(serverData);
                 ClearData();
-                $location.path('/Posts');
+                $location.path('/#');
             },
             function (serverError) {
                 notifyService.showError("Unsuccessful Login!", serverError)
@@ -29,7 +29,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
                 notifyService.showInfo("Successful Register!");
                 authentication.SetCredentials(serverData);
                 ClearData();
-                $location.path('/Posts');
+                $location.path('/#');
             },
             function (serverError) {
                 notifyService.showError("Unsuccessful Register!", serverError)
@@ -41,7 +41,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
             function(serverData) {
                 notifyService.showInfo("Successful Profile Edit!");
                 ClearData();
-                $location.path('/me');
+                $location.path('/profile');
             },
             function (serverError) {
                 notifyService.showError("Unsuccessful Profile Edit!", serverError)
@@ -53,7 +53,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
             function() {
                 notifyService.showInfo("Successful Password Change!");
                 ClearData();
-                $location.path('/me/ChangePassword');
+                $location.path('/profile/ChangePassword');
             },
             function (serverError) {
                 notifyService.showError("Unsuccessful Password Change!", serverError)
