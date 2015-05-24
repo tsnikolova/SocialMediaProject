@@ -15,8 +15,8 @@ SocialNetwork.config(function ($routeProvider) {
             templateUrl:'templates/news-feed.html',
             controller:'MainController'
         })
-        .when('/profile', {
-            templateUrl:'templates/edit-user.html',
+        .when('/#/profile', {
+            templateUrl:'templates/edit-profile.html',
             controller:'MainController'
         })
 		.when('/profile/password', {

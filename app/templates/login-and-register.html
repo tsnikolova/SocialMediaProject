@@ -1,0 +1,52 @@
+<h1>Social Network</h1>
+<div class="container">
+    <div class="well bs-component col-lg-6 col-lg-offset-3">
+        <form id="login" name="loginForm" ng-controller="AuthenticationController" ng-submit="login()">
+
+                <div class="form-group">
+                    <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputUsername" ng-model="loginData.username" placeholder="Username" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" id="inputPassword" ng-model="loginData.password" placeholder="Password" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+
+        </form>
+    </div>
+    <div class="well bs-component col-lg-6 col-lg-offset-3">
+            <form id="register" name="registerForm" ng-controller="AuthenticationController" ng-submit="register()">
+            <label for="inputUsernameReg">Username</label>
+            <input type="text" class="right" id="inputUsernameReg" ng-model="registerData.username" placeholder="Username" required="required"><br /><br />
+            <label for="inputPasswordReg" >Password</label>
+            <input type="password" class="right" id="inputPasswordReg" ng-model="registerData.password" placeholder="Password" required="required"><br /><br />
+            <label for="confirmPassword" >Confirm Password</label>
+            <input type="password" class="right" id="confirmPassword" ng-model="registerData.confirmPassword" placeholder="Confirm Password" required="required"><br /><br />
+            <label for="inputName">Name</label>
+            <input type="text" class="right" id="inputName" ng-model="registerData.name" placeholder="Name" required="required"><br /><br />
+            <label for="inputEmail" >Email</label>
+            <input type="email" class="right" id="inputEmail" ng-model="registerData.email" placeholder="Email" required="required"><br /><br />
+
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male" id="male" class="biggerMargin" ng-model="registerData.gender">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female" ng-model="registerData.gender">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="other" id="other" ng-model="registerData.gender">
+            <label for="other">Other</label><br />
+            <br />
+            <button type="submit">Register</button>
+
+
+        </form>
+    </div>
+</div>
