@@ -40,7 +40,7 @@ form#login input{
     margin:5px;
     width: 200px
 }
-form#register input.right{
+input.right{
     border: 1px solid black;
     width: 150px;
     float: right;
@@ -185,8 +185,7 @@ button#saveChanges{
 }
 /*Change Password*/
 div#newPassword{
-    text-align: center;
-    float: left;
+
     padding: 20px;
     border:1px solid black;
     width: 350px;

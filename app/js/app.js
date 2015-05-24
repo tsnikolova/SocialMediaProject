@@ -15,12 +15,12 @@ SocialNetwork.config(function ($routeProvider) {
             templateUrl:'templates/news-feed.html',
             controller:'MainController'
         })
-        .when('/#/profile', {
+        .when('/me/profile', {
             templateUrl:'templates/edit-profile.html',
             controller:'MainController'
         })
-		.when('/profile/password', {
-            templateUrl:'change-password.html',
+		.when('/me/profile/password', {
+            templateUrl:'templates/change-password.html',
             controller:'MainController'
         })
         .otherwise({redirectTo: '/'})

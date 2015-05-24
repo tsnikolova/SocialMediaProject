@@ -3,31 +3,31 @@
 SocialNetwork.factory('authentication', function ($http, baseServiceUrl) {
     var service = {};
 
-    var serviceUrl = baseServiceUrl + '/users';
+    var serviceUrl = baseServiceUrl ;
 
     service.Login = function (loginData, success, error) {
-        $http.post(serviceUrl + '/login', loginData)
+        $http.post(serviceUrl + '/users/login', loginData)
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
     service.Register = function (registerData, success, error) {
-        $http.post(serviceUrl + '/Register', registerData)
+        $http.post(serviceUrl + '/users/Register', registerData)
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
     service.EditUserProfile = function (editUserData, success, error) {
-        $http.put(serviceUrl + '/profile', editUserData, {headers: this.GetHeaders()})
+        $http.put(serviceUrl + '/me/profile', editUserData, {headers: this.GetHeaders()})
             .success(function (data, status, headers, config) {
                 success(data)
             }).error(error);
     };
 
     service.ChangePassword = function (passwordData, success, error) {
-        $http.put(serviceUrl + '/profile/password', passwordData, {headers: this.GetHeaders()})
+        $http.put(serviceUrl + '/me/profile/password', passwordData, {headers: this.GetHeaders()})
             .success(function (data, status, headers, config) {
                 success()
             }).error(error);

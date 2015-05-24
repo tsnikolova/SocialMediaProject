@@ -7,30 +7,35 @@
     <div>
         <h1 id="edit"> Edit Profile</h1>
     </div>
-
+    <form name="registerForm" ng-controller="AuthenticationController" ng-submit="editUserProfile()">
     <div id="editProfile">
         <div id="editPhoto">
-        <img alt="user-photo"><br/>
-        Allowed format: .jpg <br />
-        Limit: 128kb <br />
-        <button class="upload">Upload</button>
+
+                <img alt="user-photo"><br/>
+                Allowed format: .jpg <br />
+                Limit: 128kb <br />
+                <button type="submit" class="upload">Upload</button>
+
         </div>
         <div id="editProfileInfo">
-            <label for="name">Name</label>
-            <input type="text" id="name" value="{{name}}" ng-model="name" class="inputText"> <br />
-            <label for="email">Email</label>
-            <input type="text" id="email" value="{{email}}" ng-model="email" class="inputText"> <br />
-            <label for="male">Gender</label>
-            <input type="radio" id="male" name="gender" value="male" class="biggerMargin">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label> <br />
-            <button class="upload">Upload</button>
-            <img alt="cover" id="coverPhoto"> <br/>
-            Limit: 1024kb
+
+                <label for="inputName">Name</label>
+                <input type="text" id="inputName" ng-model="userData.name"><br/><br/>
+                <label for="inputEmail">Email</label>
+                <input type="text" id="inputEmail" ng-model="userData.email"><br/><br/>
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male" class="biggerMargin">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label> <br />
+                <button type="submit" class="upload">Upload</button>
+                <img alt="cover" id="coverPhoto"> <br/>
+                Limit: 1024kb
+
         </div>
-        <button id="saveChanges">Save Changes</button>
+        <button id="saveChanges" type="submit">Save Changes</button>
+    </form>
     </div>
 </div>

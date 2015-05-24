@@ -36,7 +36,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
             });
     };
 
-    $scope.editUser = function () {
+    $scope.editUserProfile = function () {
         authentication.EditUserProfile($scope.userData,
             function(serverData) {
                 notifyService.showInfo("Successful Profile Edit!");
