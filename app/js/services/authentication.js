@@ -36,8 +36,12 @@ SocialNetwork.factory('authentication', function ($http, baseServiceUrl) {
     service.SetCredentials = function (serverData) {
         localStorage['accessToken'] = serverData.access_token;
         localStorage['username'] = serverData.username;
+        localStorage['name'] = serverData.name;
     };
 
+    service.GetName = function () {
+        return localStorage['name'];
+    };
 	service.GetUsername = function () {
         return localStorage['username'];
     };

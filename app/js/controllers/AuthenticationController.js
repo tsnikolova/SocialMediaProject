@@ -53,7 +53,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
             function() {
                 notifyService.showInfo("Successful Password Change!");
                 ClearData();
-                $location.path('/profile/ChangePassword');
+                $location.path('/profile/password');
             },
             function (serverError) {
                 notifyService.showError("Unsuccessful Password Change!", serverError)

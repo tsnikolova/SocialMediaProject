@@ -1,16 +1,12 @@
 
-    <div ng-include="'templates/navbar.html'"></div>
-    <h1 id="news"> News Feed</h1>
-    <div class="well row" ng-repeat="news in data.newsFeed">
+<div ng-include="'templates/navbar.html'"></div>
+<h1 id="news"> News Feed</h1>
+<div class="well row" ng-repeat="news in data.newsFeed">
+    <div>
         <div>
-            <div>
-                <h1>{{name}}</h1>
-                <p>{{news.date | date: "dd MMMM yyyy"}}</p><br/>
-
-                <p>{{news.text}}</p>
-
-            </div>
-
+            <h1>{{name}}</h1>
+            <p>{{news.date | date: "dd MMMM yyyy"}}</p><br/>
+            <p>{{news.text}}</p>
         </div>
     </div>
 </div>
